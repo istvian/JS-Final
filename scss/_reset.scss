@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: fit-content;
+    font-size: 10px;
+    // overflow-x: hidden;
+    // overflow-anchor: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+.no_selection {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.no_visible {
+    display: none;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

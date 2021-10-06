@@ -1,0 +1,113 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+$color-dark: #000;
+$color-white: #FFF;
+$color-good: #4ad956;
+$color-bad: #ce2d2d;
+.body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    .header {
+        width: 100vw;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        background: $color-dark;
+        padding: .5rem 5rem;
+        .header__title {
+            color: $color-white;
+            font-size: 2rem;
+            padding: 0 2rem;
+        }
+        .header__nav {
+            display: flex;
+            flex-flow: row wrap;
+            .header__links {
+                display: flex;
+                flex-flow: row wrap;
+                .header__link {
+                    margin: 1rem;
+                    color: $color-white;
+                    list-style: none;
+                    a {
+                        font-size: 1.2rem;
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .store {
+        display: flex;
+        flex-flow: row wrap;
+        max-width: 1500px;
+        justify-content: center;
+        align-items: center;
+        .item {
+            display: grid;
+            grid-template-areas: "img title price" "img detail detail" "img add remove";
+            background: #333;
+            color: $color-white;
+            align-items: center;
+            justify-items: center;
+            margin: 1rem;
+            grid-template-columns: 15rem 20rem 10rem;
+            grid-template-rows: 5rem 10rem 5rem;
+            border-radius: 25px;
+            border: $color-dark solid 4px;
+            padding: 1rem;
+            .item__title {
+                grid-area: title;
+                text-align: center;
+                padding: .5rem;
+                font-size: 1.8rem;
+            }
+            .item__detail {
+                grid-area: detail;
+                text-align: left;
+                align-self: center;
+                justify-self: center;
+                padding: 1rem;
+                font-size: 1.2rem;
+            }
+            .item__img {
+                grid-area: img;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 25px 0 0 25px;
+            }
+            .item__price {
+                padding: .5rem;
+                grid-area: price;
+                font-size: 1.8rem;
+                justify-self: right;
+            }
+            .item__add {
+                grid-area: add;
+                cursor: pointer;
+                object-fit: cover;
+                height: 90%;
+                transition: transform .2s;
+                &:hover {
+                    transform: scale(110%);
+                }
+            }
+            .item__remove {
+                grid-area: remove;
+                cursor: pointer;
+                object-fit: cover;
+                height: 90%;
+                transition: transform .2s;
+                &:hover {
+                    transform: scale(110%);
+                }
+            }
+        }
+    }
+}
