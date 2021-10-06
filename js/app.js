@@ -20,8 +20,6 @@ class Carrito {
             if (this.items[i].nombre == item.nombre) {
                 this.items.splice(i, 1);
                 alert(`Se ha eliminado del carrito ${item.nombre}`)
-            } else {
-                alert(`No hay elementos ${item.nombre}`)
             }
         }
     }
