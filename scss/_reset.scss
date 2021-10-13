@@ -8,16 +8,14 @@
 html {
     margin: 0;
     padding: 0;
-    width: 100vw;
     height: fit-content;
     font-size: 10px;
-    // overflow-x: hidden;
-    // overflow-anchor: none;
+    overflow-x: hidden;
+    overflow-anchor: none;
     scroll-behavior: smooth;
 }
 
 body {
-    width: 100vw;
     box-sizing: border-box;
     font-size: 10px;
 }

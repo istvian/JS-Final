@@ -1,55 +1,19 @@
-class Producto {
-    constructor(nombre, precio, img, detalle) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.img = img;
-        this.detalle = detalle;
+class Local {
+    constructor(fecha, local_id, local_nombre, comuna_nombre, localidad_nombre, local_direccion, funcionamiento_hora_apertura, funcionamiento_hora_cierre, local_telefono, local_lat, local_lng, funcionamiento_dia, fk_region, fk_comuna, fk_localidad) {
+        this.fecha = fecha,
+            this.local_id = local_id,
+            this.local_nombre = local_nombre,
+            this.comuna_nombre = comuna_nombre,
+            this.localidad_nombre = localidad_nombre,
+            this.local_direccion = local_direccion,
+            this.funcionamiento_hora_apertura = funcionamiento_hora_apertura,
+            this.funcionamiento_hora_cierre = funcionamiento_hora_cierre,
+            this.local_telefono = local_telefono,
+            this.local_lat = local_lat,
+            this.local_lng = local_lng,
+            this.funcionamiento_dia = funcionamiento_dia,
+            this.fk_region = fk_region,
+            this.fk_comuna = fk_comuna,
+            this.fk_localidad = fk_localidad
     }
-}
-class Carrito {
-    constructor() {
-        this.items = new Array();
-    }
-    addItem(item) {
-        this.items.push(item);
-        console.log(`Se ha agregado a carrito ${item.nombre}`);
-        alert(`Se ha agregado al carrito ${item.nombre}`)
-    }
-    removeItem(item) {
-        for (let i = 0; i < this.items.length; i++) {
-            if (this.items[i].nombre == item.nombre) {
-                this.items.splice(i, 1);
-                alert(`Se ha eliminado del carrito ${item.nombre}`)
-            }
-        }
-    }
-    allItems() {
-        return this.items;
-    }
-}
-
-OnInit();
-let carro = new Carrito();
-
-function OnInit() {
-    let btn_add = Array.from(document.getElementsByClassName("item__add"));
-    let btn_remove = Array.from(document.getElementsByClassName("item__remove"));
-    btn_add.forEach(element => {
-        element.addEventListener("click", function() {
-            let nombre = element.parentNode.firstElementChild.textContent;
-            let precio = element.parentNode.children[3].textContent;
-            let img = element.parentNode.children[1].src;
-            let detalle = element.parentNode.children[2].textContent;
-            carro.addItem(new Producto(nombre, precio, img, detalle))
-        })
-    });
-    btn_remove.forEach(element => {
-        element.addEventListener("click", function() {
-            let nombre = element.parentNode.firstElementChild.textContent;
-            let precio = element.parentNode.children[3].textContent;
-            let img = element.parentNode.children[1].src;
-            let detalle = element.parentNode.children[2].textContent;
-            carro.removeItem(new Producto(nombre, precio, img, detalle))
-        })
-    });
-}
+};

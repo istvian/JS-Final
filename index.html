@@ -2,52 +2,79 @@
 <html lang="es">
 
 <head>
-    <meta charset=" UTF-8 ">
-    <meta http-equiv="X-UA-Compatible " content="IE=edge ">
-    <meta name="viewport " content="width=device-width, initial-scale=1.0 ">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Proyecto Final</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaFinder - Encuentra tu farmacia</title>
 </head>
 
 <body class="body">
     <header class="header">
-        <h1 class="header__title">Proyecto Final Entrega #1 - Carrito</h1>
-        <nav class="header__nav">
-            <ul class="header__links">
-                <li class="header__link"><a href="index.html">Inicio</a></li>
-                <li class="header__link"><a href="#">Tienda</a></li>
-                <li class="header__link"><a href="#">Nosotros</a></li>
-                <li class="header__link"><a href="#">Contacto</a></li>
+        <nav class="nav">
+            <a href="index.html" class="nav__emp">
+                <img src="img/logo.png" alt="Logo" class="nav__logo">
+                <span class="nav__title">FarmaFinder</span>
+            </a>
+            <ul class="nav__links">
+                <li class="nav__link">
+                    <a href="#inicio" class="link">Inicio</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#locales" class="link">Locales</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#proyecto" class="link">Sobre el Proyecto</a>
+                </li>
             </ul>
         </nav>
     </header>
-    <div class="store">
-        <div class="item">
-            <h2 class="item__title">Zapatilla Espacial</h2>
-            <img class="item__img" src="img/1.jpg" alt=">Zapatilla">
-            <p class="item__detail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim fugit officiis, quasi incidunt placeat aspernatur.</p>
-            <p class="item__price">$19.990</p>
-            <img src="img/icons/add.png" alt="Add item" class="item__add">
-            <img src="img/icons/remove.png" alt="Remove item" class="item__remove">
+    <div class="section" id="inicio">
+        <div class="section__block section__block--left">
+            <div class="block block--left">
+                <h2 class="block__title text--left">Encuentra la farmacia que necesitas</h2>
+                <p class="block__text text--left">Recopilamos la información de todas las farmacias de Chile, para que puedas encontrar tu farmacia más cercana</p>
+            </div>
         </div>
-        <div class="item">
-            <h2 class="item__title">Zapatilla Terrestre</h2>
-            <img class="item__img" src="img/2.jpg" alt=">Zapatilla">
-            <p class="item__detail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim fugit officiis, quasi incidunt placeat aspernatur.</p>
-            <p class="item__price">$19.990</p>
-            <img src="img/icons/add.png" alt="Add item" class="item__add">
-            <img src="img/icons/remove.png" alt="Remove item" class="item__remove">
+        <div class="section__block section__block--right" id="locales">
+            <div class="block block--right">
+                <h2 class="block__title text--left">Buscador</h2>
+                <p class="block__text text--left">Encuentra la farmacia que necesitas</p>
+            </div>
+            <form action="" class="form">
+                <select name="list_region" class="form__select">
+                    <option selected value="0">Selecciona una Región</option>
+                        <option value="1">Ciudad 1</option> 
+                        <option value="2">Ciudad 2</option> 
+                        <option value="3">Ciudad 3</option> 
+                 </select>
+                <select name="list_city" class="form__select">
+                    <option selected value="0">Selecciona una ciudad</option>
+                        <option value="1">Ciudad 1</option> 
+                        <option value="2">Ciudad 2</option> 
+                        <option value="3">Ciudad 3</option> 
+                 </select>
+                <div class="result">
+                    <div class="farmacia">
+                        <span class="farmacia__title">Farmacia Cruz Verde</span>
+                        <span class="farmacia__detail">- Horario 09:00 - 21:00</span>
+                        <span class="farmacia__detail">- Calle falsa 1234</span>
+                        <a href="#" class="farmacia__link">+569 1234 5678</a>
+                        <a href="#" class="farmacia__link">Ir al mapa</a>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="item">
-            <h2 class="item__title">Zapatilla Acuatica</h2>
-            <img class="item__img" src="img/3.jpg" alt=">Zapatilla">
-            <p class="item__detail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim fugit officiis, quasi incidunt placeat aspernatur.</p>
-            <p class="item__price">$19.990</p>
-            <img src="img/icons/add.png" alt="Add item" class="item__add">
-            <img src="img/icons/remove.png" alt="Remove item" class="item__remove">
+        <div class="section__block section__block--end" id="proyecto">
+            <div class="block block--left">
+                <h2 class="block__title text--left">Sobre el Proyecto</h2>
+                <p class="block__text text--left">Este sitio es parte del proyecto final para el curso de Javascript de Coderhouse.<br><br>Fue construido con las siguientes tecnologias: <br>- HTML5 <br>- CSS<br>- SASS <br>- JAVASCRIPT</p>
+            </div>
         </div>
     </div>
+    <footer class="footer">
 
+    </footer>
     <script src="js/app.js"></script>
 </body>
 
