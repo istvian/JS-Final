@@ -9,7 +9,7 @@
     <title>FarmaFinder - Encuentra tu farmacia</title>
 </head>
 
-<body class="body">
+<body class="body no_selection" id="inicio">
     <header class="header">
         <nav class="nav">
             <a href="index.html" class="nav__emp">
@@ -29,7 +29,31 @@
             </ul>
         </nav>
     </header>
-    <div class="section" id="inicio">
+    <header class="header_mobile">
+        <nav class="nav">
+            <a href="index.html" class="nav__emp">
+                <img src="img/logo.png" alt="Logo" class="nav__logo">
+                <span class="nav__title">FarmaFinder</span>
+            </a>
+            <div class="menu" id="menu-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <ul class="nav__links" id="menu" style="display:none">
+        <li class="nav__link">
+            <a href="#inicio" class="link">Inicio</a>
+        </li>
+        <li class="nav__link">
+            <a href="#locales" class="link">Locales</a>
+        </li>
+        <li class="nav__link">
+            <a href="#proyecto" class="link">Sobre el Proyecto</a>
+        </li>
+    </ul>
+    <div class="section">
         <div class="section__block section__block--left">
             <div class="block block--left">
                 <h2 class="block__title text--left">Encuentra la farmacia que necesitas</h2>
@@ -42,13 +66,13 @@
                 <p class="block__text text--left">Encuentra la farmacia que necesitas</p>
             </div>
             <form action="" class="form">
-                <select name="list_region" class="form__select">
+                <select name="list_region" class="form__select" id="region-selector">
                     <option selected value="0">Selecciona una Región</option>
                         <option value="1">Ciudad 1</option> 
                         <option value="2">Ciudad 2</option> 
                         <option value="3">Ciudad 3</option> 
                  </select>
-                <select name="list_city" class="form__select">
+                <select name="list_city" class="form__select" id="city-selector">
                     <option selected value="0">Selecciona una ciudad</option>
                         <option value="1">Ciudad 1</option> 
                         <option value="2">Ciudad 2</option> 
@@ -64,7 +88,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div>|
         <div class="section__block section__block--end" id="proyecto">
             <div class="block block--left">
                 <h2 class="block__title text--left">Sobre el Proyecto</h2>
@@ -75,7 +99,9 @@
     <footer class="footer">
 
     </footer>
-    <script src="js/app.js"></script>
+    <script type="text/javascript" src="farmacias.json"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
 </body>
 
 </html>

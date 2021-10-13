@@ -17,3 +17,35 @@ class Local {
             this.fk_localidad = fk_localidad
     }
 };
+
+// MENU HAMBURGESA
+let btn = document.getElementById("menu-btn");
+let menu = document.getElementById("menu");
+let link = Array.from(document.getElementsByClassName("link"));
+link.forEach(element => {
+    element.onclick = function name(params) {
+        if (menu.style.display == "none") {
+            menu.style.display = "flex";
+        } else {
+            menu.style.display = "none";
+        }
+    }
+});
+btn.onclick = () => {
+    if (menu.style.display == "none") {
+        menu.style.display = "flex";
+    } else {
+        menu.style.display = "none";
+    }
+};
+
+// FUNCIONALIDAD PAGINA
+
+let region_selector = document.getElementById("region-selector");
+let city_selector = document.getElementById("city-selector");
+let locales = new Local();
+const getJSON = async url => {
+    const response = await fetch(url);
+    return response.json(); // get JSON from the response 
+}
+const data = Array.of(JSON.parse(getJSON("https://raw.githubusercontent.com/istvian/JS-Final/master/farmacias.json")));

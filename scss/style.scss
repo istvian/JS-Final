@@ -1,15 +1,224 @@
-    @import "reset";
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-    $color-dark: #000;
-    $color-white: #FFF;
-    $color-uno:#00CEC8;
-    $color-dos:#005B5C;
-    $color-tres:#545479;
-    $color-transparent:#00000042;
-    $color-hover:#ffffff42;
-    $color-bg:#2a2a41;
+@import "reset";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+$color-dark: #000;
+$color-white: #fff;
+$color-uno: #00cec8;
+$color-dos: #005b5c;
+$color-tres: #545479;
+$color-transparent: #00000042;
+$color-hover: #ffffff42;
+$color-bg: #2a2a41;
+.body {
+    font-family: "Poppins", sans-serif;
+    background: $color-bg;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .header_mobile {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0px;
+        width: 90%;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        background: $color-tres;
+        border-bottom: $color-bg solid 3px;
+        .nav {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            width: 100%;
+            align-self: flex-end;
+            .nav__emp {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                .nav__logo {
+                    height: 3rem;
+                    object-fit: scale-down;
+                    padding: 0 1rem;
+                    margin: 0 1rem;
+                    transition: background 0.3s, transform 0.1s;
+                    &:hover {
+                        transform: scale(110%);
+                    }
+                }
+                .nav__title {
+                    color: white;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    transition: background 0.3s;
+                    border-radius: 5px;
+                    padding: 0.5rem;
+                    &:hover {
+                        background: $color-hover;
+                    }
+                }
+            }
+            .nav__links {
+                list-style: none;
+                height: 100%;
+                padding: 1rem;
+                .nav__link {
+                    display: inline;
+                    margin: 0.5rem;
+                    .link {
+                        color: white;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        padding: 0.5rem 0.8rem;
+                        border-radius: 5px;
+                        transition: background 0.3s;
+                        &:hover {
+                            background: $color-transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        .section__block {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            margin: 0 0 5rem 0;
+            background-color: $color-dos;
+            box-shadow: $color-transparent 0 0 20px 10px;
+            .block {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                height: 100%;
+                .block__title {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: $color-white;
+                    padding: 1rem;
+                }
+                .block__text {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    color: $color-white;
+                    padding: 1rem;
+                }
+                .text--right {
+                    text-align: right;
+                    align-self: flex-end;
+                    margin: 0 5rem;
+                }
+                .text--left {
+                    text-align: left;
+                    align-self: flex-start;
+                    margin: 0 5rem;
+                }
+            }
+            .block--left {
+                align-self: flex-end;
+            }
+            .block--right {
+                align-self: flex-start;
+            }
+            .form {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+                align-self: flex-start;
+                .form__select {
+                    display: block;
+                    width: 50%;
+                    margin: 1rem 0.5rem;
+                }
+                .result {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1rem 1rem;
+                    .farmacia {
+                        display: grid;
+                        background: $color-tres;
+                        padding: 1rem;
+                        border-radius: 10px;
+                        border: $color-bg solid 3px;
+                        .farmacia__title {
+                            color: $color-white;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            margin: 0.5rem;
+                        }
+                        .farmacia__detail {
+                            color: $color-white;
+                            font-size: 1.4rem;
+                            font-weight: normal;
+                            margin: 0.5rem;
+                        }
+                        .farmacia__link {
+                            color: $color-white;
+                            background: $color-uno;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            width: 70%;
+                            justify-self: center;
+                            margin: 0.5rem;
+                            padding: 0.5rem;
+                            border-radius: 5px;
+                            text-decoration: none;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .section__block--left {
+            background-image: url("../img/banner-left.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left;
+        }
+        .section__block--right {
+            background-image: url("../img/banner-right.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+        }
+        .section__block--end {
+            background-image: url("../img/banner-doctor.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
     .body {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         background: $color-bg;
         display: flex;
         flex-flow: column nowrap;
@@ -18,80 +227,118 @@
         width: 100%;
         height: 100%;
         .header {
-            position: fixed;
+            display: none;
+        }
+        .header_mobile {
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-content: space-between;
+            position: sticky;
             top: 0px;
-            width: 90%;
             left: 0px;
             right: 0px;
             margin: auto;
-            display: flex;
-            flex-flow: column nowrap;
-            background: $color-tres;
-            border-bottom: $color-bg solid 3px;
+            background: $color-bg;
+            z-index: 30;
             .nav {
                 display: flex;
-                flex-flow: row wrap;
+                flex-flow: row nowrap;
                 justify-content: space-between;
                 align-items: center;
-                padding: .5rem;
-                width: 100%;
-                align-self: flex-end;
+                padding: 0.5rem 2rem;
                 .nav__emp {
                     display: flex;
-                    flex-flow: row wrap;
+                    flex-flow: row nowrap;
                     justify-content: center;
                     align-items: center;
                     .nav__logo {
-                        height: 3rem;
-                        object-fit: scale-down;
-                        padding: 0 1rem;
-                        margin: 0 1rem;
-                        transition: background 0.3s, transform 0.1s;
-                        &:hover {
-                            transform: scale(110%);
-                        }
+                        height: 4rem;
+                        width: 4rem;
                     }
                     .nav__title {
-                        color: white;
-                        font-size: 1.5rem;
-                        font-weight: bold;
+                        color: $color-white;
                         text-transform: uppercase;
-                        transition: background 0.3s;
-                        border-radius: 5px;
-                        padding: .5rem;
-                        &:hover {
-                            background: $color-hover;
-                        }
+                        font-size: 2rem;
+                        font-weight: bold;
+                        padding: 0.5rem;
+                        margin: 0.5rem;
                     }
                 }
-                .nav__links {
-                    list-style: none;
-                    height: 100%;
-                    padding: 1rem;
-                    .nav__link {
-                        display: inline;
-                        margin: .5rem;
-                        .link {
-                            color: white;
-                            text-decoration: none;
-                            font-size: 1.5rem;
-                            padding: .5rem .8rem;
-                            border-radius: 5px;
-                            transition: background 0.3s;
-                            &:hover {
-                                background: $color-transparent;
-                            }
-                        }
+                .menu {
+                    height: 5rem;
+                    width: 5rem;
+                    background: $color-transparent;
+                    border-radius: 15px;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1rem;
+                    cursor: pointer;
+                    transition: background 0.2s;
+                    border: solid $color-bg 1px;
+                    .bar {
+                        display: block;
+                        width: 3rem;
+                        height: 0.4rem;
+                        margin: 0.3rem;
+                        background: $color-white;
+                        border-radius: 10%;
+                    }
+                    &:hover {
+                        background: $color-hover;
+                    }
+                    &:hover>.bar {
+                        background: $color-dark;
                     }
                 }
             }
         }
+        .nav__links {
+            display: none;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            height: 100%;
+            width: 60%;
+            background: linear-gradient(180deg, $color-bg, $color-tres);
+            z-index: 20;
+            padding: 8rem 0rem;
+            flex-flow: column nowrap;
+            justify-content: start;
+            align-items: flex-start;
+            animation: menu_appears 0.3s ease 1;
+            .nav__link {
+                padding: 1rem 2.5rem;
+                background: $color-transparent;
+                width: 100%;
+                margin: .3rem 0;
+                &:hover {
+                    background: $color-hover;
+                }
+                .link {
+                    display: block;
+                    color: $color-white;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        @keyframes menu_appears {
+            0% {
+                opacity: 0%;
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
         .section {
+            width: 100%;
             display: flex;
             flex-flow: column nowrap;
-            align-items: center;
             justify-content: center;
-            width: 90%;
+            align-items: center;
             .section__block {
                 display: flex;
                 flex-flow: column nowrap;
@@ -99,7 +346,7 @@
                 align-items: center;
                 min-height: 100vh;
                 width: 100%;
-                margin: 0 0 5rem 0;
+                margin: 0 0 1rem 0;
                 background-color: $color-dos;
                 box-shadow: $color-transparent 0 0 20px 10px;
                 .block {
@@ -107,8 +354,11 @@
                     flex-flow: column nowrap;
                     justify-content: center;
                     align-items: center;
-                    width: 50%;
-                    height: 100%;
+                    background: $color-bg;
+                    align-self: center;
+                    justify-self: center;
+                    padding: 1rem;
+                    width: 80%;
                     .block__title {
                         font-size: 3rem;
                         font-weight: bold;
@@ -122,34 +372,37 @@
                         padding: 1rem;
                     }
                     .text--right {
-                        text-align: right;
-                        align-self: flex-end;
-                        margin: 0 5rem;
+                        text-align: left;
+                        align-self: center;
+                        margin: 0;
                     }
                     .text--left {
                         text-align: left;
-                        align-self: flex-start;
-                        margin: 0 5rem;
+                        align-self: center;
+                        margin: 0;
                     }
                 }
                 .block--left {
-                    align-self: flex-end;
+                    align-self: center;
                 }
                 .block--right {
-                    align-self: flex-start;
+                    align-self: center;
                 }
                 .form {
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: center;
                     align-items: center;
-                    width: 40%;
+                    width: 80%;
                     height: 100%;
-                    align-self: flex-start;
+                    align-self: center;
+                    background: $color-bg;
+                    padding: 1rem;
+                    margin: 0.5rem;
                     .form__select {
                         display: block;
-                        width: 50%;
-                        margin: 1rem .5rem;
+                        width: 70%;
+                        margin: 1rem 0.5rem;
                     }
                     .result {
                         display: flex;
@@ -167,13 +420,13 @@
                                 color: $color-white;
                                 font-size: 2rem;
                                 font-weight: bold;
-                                margin: .5rem;
+                                margin: 0.5rem;
                             }
                             .farmacia__detail {
                                 color: $color-white;
                                 font-size: 1.4rem;
                                 font-weight: normal;
-                                margin: .5rem;
+                                margin: 0.5rem;
                             }
                             .farmacia__link {
                                 color: $color-white;
@@ -182,8 +435,8 @@
                                 font-weight: bold;
                                 width: 70%;
                                 justify-self: center;
-                                margin: .5rem;
-                                padding: .5rem;
+                                margin: 0.5rem;
+                                padding: 0.5rem;
                                 border-radius: 5px;
                                 text-decoration: none;
                                 text-align: center;
@@ -195,44 +448,21 @@
             .section__block--left {
                 background-image: url("../img/banner-left.png");
                 background-repeat: no-repeat;
-                background-size: contain;
-                background-position: left;
+                background-size: cover;
+                background-position: center;
             }
             .section__block--right {
                 background-image: url("../img/banner-right.png");
                 background-repeat: no-repeat;
-                background-size: contain;
-                background-position: right;
+                background-size: cover;
+                background-position: center;
             }
             .section__block--end {
                 background-image: url("../img/banner-doctor.png");
                 background-repeat: no-repeat;
-                background-size: contain;
-                background-position: left;
+                background-size: cover;
+                background-position: center;
             }
         }
     }
-    
-    @media screen and (max-width:640px) {
-        .body {
-            background: $color-uno;
-            .header {
-                width: 100%;
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: center;
-                align-items: center;
-                .nav {
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: .5rem;
-                    width: 100%;
-                }
-            }
-            .section {
-                width: 100%;
-            }
-        }
-    }
+}
