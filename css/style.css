@@ -408,6 +408,35 @@ div {
   background-position: left;
 }
 
+.body .footer {
+  width: 90%;
+  background: #545479;
+  margin-bottom: 4rem;
+}
+
+.body .footer .creditos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.body .footer .creditos .creditos__text {
+  font-weight: normal;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 800px) {
   .body {
     font-family: "Poppins", sans-serif;

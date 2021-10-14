@@ -233,6 +233,23 @@ $color-bg: #2a2a41;
             background-position: left;
         }
     }
+    .footer {
+        width: 90%;
+        background: $color-tres;
+        margin-bottom: 4rem;
+        .creditos {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            .creditos__text {
+                font-weight: normal;
+                color: $color-white;
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {

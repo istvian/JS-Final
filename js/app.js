@@ -118,9 +118,8 @@ function SetComunas(json) {
 
 function GetFarmacias() {
     var req = new XMLHttpRequest();
-    // req.responseType = 'json';
     // req.open('GET', "https://farmanet.minsal.cl/index.php/ws/getLocalesTurnos", true);
-    req.open('GET', "../farmacias.json", true);
+    req.open('GET', "https://raw.githubusercontent.com/istvian/JS-Final/master/farmacias.json", true);
     req.onload = function() {
         var jsonResponse = req.response;
         // console.log(jsonResponse);
@@ -132,7 +131,7 @@ function GetFarmacias() {
 function GetComunas() {
     var req = new XMLHttpRequest();
     // req.responseType = 'json';
-    req.open('GET', "../regiones.json", true);
+    req.open('GET', "https://raw.githubusercontent.com/istvian/JS-Final/master/regiones.json", true);
     req.onload = function() {
         var jsonResponse = req.response;
         SetComunas(jsonResponse);
