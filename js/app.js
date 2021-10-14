@@ -121,7 +121,6 @@ function GetFarmacias() {
     // req.responseType = 'json';
     // req.open('GET', "https://farmanet.minsal.cl/index.php/ws/getLocalesTurnos", true);
     req.open('GET', "https://raw.githubusercontent.com/istvian/JS-Final/master/farmacias.json", true);
-    req.setRequestHeader('Content-Type', 'text/html');
     req.onload = function() {
         var jsonResponse = req.response;
         // console.log(jsonResponse);
