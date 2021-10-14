@@ -42,7 +42,7 @@
             </div>
         </nav>
     </header>
-    <ul class="nav__links" id="menu" style="display:none">
+    <ul class="menu__hide" id="menu" style="display:none">
         <li class="nav__link">
             <a href="#inicio" class="link">Inicio</a>
         </li>
@@ -56,14 +56,14 @@
     <div class="section">
         <div class="section__block section__block--left">
             <div class="block block--left">
-                <h2 class="block__title text--left">Encuentra la farmacia que necesitas</h2>
-                <p class="block__text text--left">Recopilamos la información de todas las farmacias de Chile, para que puedas encontrar tu farmacia más cercana</p>
+                <h2 class="block__title text--left">Encuentra la farmacia de turno de tu localidad</h2>
+                <p class="block__text text--left">Recopilamos la información oficial de todas las farmacias de Chile, para que puedas encontrar tu farmacia más cercana y con los datos más recientes</p>
             </div>
         </div>
         <div class="section__block section__block--right" id="locales">
-            <div class="block block--right">
-                <h2 class="block__title text--left">Buscador</h2>
-                <p class="block__text text--left">Encuentra la farmacia que necesitas</p>
+            <div class="block block--right block--farmacia">
+                <h2 class="block__title text--center">Buscador</h2>
+                <p class="block__text text--center">Farmacias de turno</p>
             </div>
             <form action="" class="form">
                 <select name="list_region" class="form__select" id="region-selector">
@@ -90,11 +90,11 @@
                  </select>
                 <div class="result">
                     <div class="farmacia">
-                        <span class="farmacia__title">Farmacia Cruz Verde</span>
-                        <span class="farmacia__detail">- Horario 09:00 - 21:00</span>
-                        <span class="farmacia__detail">- Calle falsa 1234</span>
-                        <a href="#" class="farmacia__link">+569 1234 5678</a>
-                        <a href="#" class="farmacia__link">Ir al mapa</a>
+                        <span id="farmacia-nombre" class="farmacia__title">Nombre:</span>
+                        <span id="farmacia-hora" class="farmacia__detail">- Horario:</span>
+                        <span id="farmacia-direccion" class="farmacia__detail">- Dirección:</span>
+                        <a href="#" id="farmacia-call" class="farmacia__link">Llamar</a>
+                        <a href="#" id="farmacia-geo" class="farmacia__link">Ir al mapa</a>
                     </div>
                 </div>
             </form>
