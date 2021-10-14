@@ -48,4 +48,4 @@ const getJSON = async url => {
     const response = await fetch(url);
     return response.json(); // get JSON from the response 
 }
-const data = Array.of(JSON.parse(getJSON("https://raw.githubusercontent.com/istvian/JS-Final/master/farmacias.json")));
+const data = getJSON("https://raw.githubusercontent.com/istvian/JS-Final/master/farmacias.json");
