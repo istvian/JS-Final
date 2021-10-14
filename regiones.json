@@ -1,6 +1,6 @@
 [{
         "region": "Arica y Parinacota",
-        "numero": "XV",
+        "numero": "1",
         "comunas": [
             "Arica",
             "Camarones",
@@ -10,7 +10,7 @@
     },
     {
         "region": "Tarapacá",
-        "numero": "I",
+        "numero": "2",
         "comunas": [
             "Alto Hospicio",
             "Camiña",
@@ -23,7 +23,7 @@
     },
     {
         "region": "Antofagasta",
-        "numero": "II",
+        "numero": "3",
         "comunas": [
             "Antofagasta",
             "Calama",
@@ -38,7 +38,7 @@
     },
     {
         "region": "Atacama",
-        "numero": "III",
+        "numero": "4",
         "comunas": [
             "Alto del Carmen",
             "Caldera",
@@ -53,7 +53,7 @@
     },
     {
         "region": "Coquimbo",
-        "numero": "IV",
+        "numero": "5",
         "comunas": [
             "Andacollo",
             "Canela",
@@ -74,7 +74,7 @@
     },
     {
         "region": "Valparaíso",
-        "numero": "V",
+        "numero": "6",
         "comunas": [
             "Algarrobo",
             "Cabildo",
@@ -118,7 +118,7 @@
     },
     {
         "region": "Metropolitana de Santiago",
-        "numero": "MET",
+        "numero": "7",
         "comunas": [
             "Alhué",
             "Buin",
@@ -176,7 +176,7 @@
     },
     {
         "region": "Libertador Gral. Bernardo O’Higgins",
-        "numero": "VI",
+        "numero": "8",
         "comunas": [
             "Chimbarongo",
             "Chépica",
@@ -215,7 +215,7 @@
     },
     {
         "region": "Maule",
-        "numero": "VII",
+        "numero": "9",
         "comunas": [
             "Cauquenes",
             "Chanco",
@@ -252,7 +252,7 @@
 
     {
         "region": "Biobío",
-        "numero": "VIII",
+        "numero": "10",
         "comunas": [
             "Alto Biobío",
             "Antuco",
@@ -292,7 +292,7 @@
 
     {
         "region": "Araucanía",
-        "numero": "IX",
+        "numero": "11",
         "comunas": [
             "Angol",
             "Carahue",
@@ -330,7 +330,7 @@
     },
     {
         "region": "Los Ríos",
-        "numero": "XIV",
+        "numero": "12",
         "comunas": [
             "Corral",
             "Futrono",
@@ -348,7 +348,7 @@
     },
     {
         "region": "Los Lagos",
-        "numero": "X",
+        "numero": "13",
         "comunas": [
             "Ancud",
             "Calbuco",
@@ -384,7 +384,7 @@
     },
     {
         "region": "Aisén",
-        "numero": "XI",
+        "numero": "14",
         "comunas": [
             "Aisén",
             "Chile Chico",
@@ -400,7 +400,7 @@
     },
     {
         "region": "Magallanes y Antártica Chilena",
-        "numero": "XII",
+        "numero": "15",
         "comunas": [
             "Antártica",
             "Cabo de Hornos (Ex Navarino)",
@@ -417,7 +417,7 @@
     },
     {
         "region": "Ñuble",
-        "numero": "XVI",
+        "numero": "16",
         "comunas": [
             "Bulnes",
             "Chillán Viejo",

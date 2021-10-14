@@ -50,7 +50,7 @@ GetComunas();
 
 region_selector.onchange = () => {
     if (city_selector.children.length > 1) {
-        for (let i = 2; i < city_selector.length; i++) {
+        for (let i = 1; i < city_selector.length; i++) {
             city_selector.removeChild(city_selector.childNodes[i]);
         }
     }
