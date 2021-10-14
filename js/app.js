@@ -119,7 +119,7 @@ function SetComunas(json) {
 function GetFarmacias() {
     var req = new XMLHttpRequest();
     // req.responseType = 'json';
-    req.open('GET', "http://farmanet.minsal.cl/index.php/ws/getLocalesTurnos", true);
+    req.open('GET', "https://farmanet.minsal.cl/index.php/ws/getLocalesTurnos", true);
     req.onload = function() {
         var jsonResponse = req.response;
         // console.log(jsonResponse);
