@@ -43,9 +43,29 @@ btn.onclick = () => {
 
 let region_selector = document.getElementById("region-selector");
 let city_selector = document.getElementById("city-selector");
-let locales = new Local();
-const getJSON = async url => {
-    const response = await fetch(url);
-    return response.json(); // get JSON from the response 
+let data = new Array();
+GetJson();
+
+region_selector.onchange = () => {
+    let result = Array.of(data.find(e => e.fk_region == region_selector.value));
+    result.forEach(element => {
+        console.log(element);
+    });
+
 }
-const data = getJSON("https://raw.githubusercontent.com/istvian/JS-Final/master/farmacias.json");
+
+function SetJson(json) {
+    data = JSON.parse(json);
+}
+
+function GetJson() {
+    var req = new XMLHttpRequest();
+    // req.responseType = 'json';
+    req.open('GET', "http://farmanet.minsal.cl/index.php/ws/getLocalesTurnos", true);
+    req.onload = function() {
+        var jsonResponse = req.response;
+        // console.log(jsonResponse);
+        SetJson(jsonResponse);
+    };
+    req.send(null);
+};
