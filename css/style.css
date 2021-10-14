@@ -807,9 +807,11 @@ div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
     margin: 1rem 1rem;
   }
   .body .section .section__block .form .result .farmacia {
+    width: 80%;
     display: -ms-grid;
     display: grid;
     background: #545479;

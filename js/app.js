@@ -103,7 +103,7 @@ city_selector.onchange = () => {
         f_nombre.textContent = `Nombre: ${result.local_nombre}`;
         f_hora.textContent = `Horario: ${String(result.funcionamiento_hora_apertura).slice(0,5)} a ${String(result.funcionamiento_hora_cierre).slice(0,5)}`
         f_direccion.textContent = `Dirección: ${result.local_direccion}`;
-        f_call.href = `callto:${result.local_telefono}`;
+        f_call.href = `Tel:${result.local_telefono}`;
         f_geo.href = `https://maps.google.com/?q=${result.local_lat},${result.local_lng}`;
     }
 }

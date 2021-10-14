@@ -482,8 +482,10 @@ $color-bg: #2a2a41;
                         flex-flow: column nowrap;
                         justify-content: center;
                         align-items: center;
+                        width: 100%;
                         margin: 1rem 1rem;
                         .farmacia {
+                            width: 80%;
                             display: grid;
                             background: $color-tres;
                             padding: 1rem;
