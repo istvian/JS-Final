@@ -249,33 +249,7 @@
             "Yerbas Buenas"
         ]
     },
-    {
-        "region": "Ñuble",
-        "numero": "XVI",
-        "comunas": [
-            "Bulnes",
-            "Chillán Viejo",
-            "Chillán",
-            "Cobquecura",
-            "Coelemu",
-            "Coihueco",
-            "El Carmen",
-            "Ninhue",
-            "Ñiquén",
-            "Pemuco",
-            "Pinto",
-            "Portezuelo",
-            "Quillón",
-            "Quirihue",
-            "Ránquil",
-            "San Carlos",
-            "San Fabián",
-            "San Ignacio",
-            "San Nicolás",
-            "Treguaco",
-            "Yungay"
-        ]
-    },
+
     {
         "region": "Biobío",
         "numero": "VIII",
@@ -315,6 +289,7 @@
             "Yumbel"
         ]
     },
+
     {
         "region": "Araucanía",
         "numero": "IX",
@@ -408,7 +383,7 @@
         ]
     },
     {
-        "region": "Aisén del Gral. Carlos Ibáñez del Campo",
+        "region": "Aisén",
         "numero": "XI",
         "comunas": [
             "Aisén",
@@ -424,7 +399,7 @@
         ]
     },
     {
-        "region": "Magallanes y de la Antártica Chilena",
+        "region": "Magallanes y Antártica Chilena",
         "numero": "XII",
         "comunas": [
             "Antártica",
@@ -438,6 +413,33 @@
             "San Gregorio",
             "Timaukel",
             "Torres del Paine"
+        ]
+    },
+    {
+        "region": "Ñuble",
+        "numero": "XVI",
+        "comunas": [
+            "Bulnes",
+            "Chillán Viejo",
+            "Chillán",
+            "Cobquecura",
+            "Coelemu",
+            "Coihueco",
+            "El Carmen",
+            "Ninhue",
+            "Ñiquén",
+            "Pemuco",
+            "Pinto",
+            "Portezuelo",
+            "Quillón",
+            "Quirihue",
+            "Ránquil",
+            "San Carlos",
+            "San Fabián",
+            "San Ignacio",
+            "San Nicolás",
+            "Treguaco",
+            "Yungay"
         ]
     }
 ]
