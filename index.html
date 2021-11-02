@@ -2,11 +2,11 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FarmaFinder - Encuentra tu farmacia</title>
 </head>
 
@@ -14,7 +14,7 @@
     <header class="header">
         <nav class="nav">
             <a href="index.html" class="nav__emp">
-                <img src="img/logo.png" alt="Logo" class="nav__logo">
+                <img src="img/logo.png" alt="Logo" class="nav__logo" />
                 <span class="nav__title">FarmaFinder</span>
             </a>
             <ul class="nav__links">
@@ -33,7 +33,7 @@
     <header class="header_mobile">
         <nav class="nav">
             <a href="index.html" class="nav__emp">
-                <img src="img/logo.png" alt="Logo" class="nav__logo">
+                <img src="img/logo.png" alt="Logo" class="nav__logo" />
                 <span class="nav__title">FarmaFinder</span>
             </a>
             <div class="menu" id="menu-btn">
@@ -43,7 +43,7 @@
             </div>
         </nav>
     </header>
-    <ul class="menu__hide" id="menu" style="display:none">
+    <ul class="menu__hide" id="menu" style="display: none">
         <li class="nav__link">
             <a href="#inicio" class="link">Inicio</a>
         </li>
@@ -57,8 +57,12 @@
     <div class="section">
         <div class="section__block section__block--left">
             <div class="block block--left">
-                <h1 class="block__title text--left">Encuentra la farmacia de turno de tu localidad</h1>
-                <p class="block__text text--left">Recopilamos la información oficial de todas las farmacias de Chile, para que puedas encontrar tu farmacia más cercana y con los datos más recientes</p>
+                <h1 class="block__title text--left">
+                    Encuentra la farmacia de turno de tu localidad
+                </h1>
+                <p class="block__text text--left">
+                    Recopilamos la información oficial de todas las farmacias de Chile, para que puedas encontrar tu farmacia más cercana y con los datos más recientes
+                </p>
             </div>
         </div>
         <div class="section__block section__block--right" id="locales">
@@ -68,29 +72,29 @@
             </div>
             <form action="" class="form">
                 <select name="list_region" class="form__select" id="region-selector">
-                    <option selected value="0">Selecciona una Región</option>
-                    <option value="1">Arica y Parinacota</option> 
-                        <option value="2">Tarapacá</option> 
-                        <option value="3">Antofagasta</option> 
-                        <option value="4">Atacama</option> 
-                        <option value="5">Coquimbo</option> 
-                        <option value="6">Valparaíso</option> 
-                        <option value="7">Metropolitana de Santiago</option> 
-                        <option value="8">Libertador Gral. Bernardo O’Higgins</option> 
-                        <option value="9">Maule</option> 
-                        <option value="10">Biobío</option> 
-                        <option value="11">Araucanía</option> 
-                        <option value="12">Los Ríos</option> 
-                        <option value="13">Los Lagos</option> 
-                        <option value="14">Aysen</option> 
-                        <option value="15">Magallanes y Antártica Chilena</option> 
-                        <option value="16">Ñuble</option> 
-                 </select>
+            <option selected value="0">Selecciona una Región</option>
+            <option value="1">Arica y Parinacota</option>
+            <option value="2">Tarapacá</option>
+            <option value="3">Antofagasta</option>
+            <option value="4">Atacama</option>
+            <option value="5">Coquimbo</option>
+            <option value="6">Valparaíso</option>
+            <option value="7">Metropolitana de Santiago</option>
+            <option value="8">Libertador Gral. Bernardo O’Higgins</option>
+            <option value="9">Maule</option>
+            <option value="10">Biobío</option>
+            <option value="11">Araucanía</option>
+            <option value="12">Los Ríos</option>
+            <option value="13">Los Lagos</option>
+            <option value="14">Aysen</option>
+            <option value="15">Magallanes y Antártica Chilena</option>
+            <option value="16">Ñuble</option>
+          </select>
                 <select name="list_city" class="form__select" id="city-selector">
-                    <option selected value="0">Selecciona una ciudad</option>
-                 </select>
+            <option selected value="0">Selecciona una ciudad</option>
+          </select>
                 <div class="result">
-                    <div class="farmacia">
+                    <div class="farmacia" id="farmacia-container">
                         <span id="farmacia-nombre" class="farmacia__title">Nombre:</span>
                         <span id="farmacia-hora" class="farmacia__detail">- Horario:</span>
                         <span id="farmacia-direccion" class="farmacia__detail">- Dirección:</span>
@@ -99,11 +103,14 @@
                     </div>
                 </div>
             </form>
-        </div>|
+        </div>
+        |
         <div class="section__block section__block--end" id="proyecto">
             <div class="block block--left">
                 <h2 class="block__title text--left">Sobre el Proyecto</h2>
-                <p class="block__text text--left">Este sitio es parte del proyecto final para el curso de Javascript de Coderhouse.<br><br>Fue construido con las siguientes tecnologias: <br>- HTML5 <br>- CSS<br>- SASS <br>- JAVASCRIPT</p>
+                <p class="block__text text--left">
+                    Este sitio es parte del proyecto final para el curso de Javascript de Coderhouse.<br /><br />Fue construido con las siguientes tecnologias: <br />- HTML5 <br />- CSS<br />- SASS <br />- JAVASCRIPT <br>- JQUERY
+                </p>
             </div>
         </div>
     </div>
@@ -114,11 +121,10 @@
             <p class="creditos__text">Ilustrations made by Megan Rx</p>
             <p class="creditos__text">Icon made by mcmurryjulie</p>
         </div>
-
-
     </footer>
-    <script type="text/javascript" src="js/app.js"></script>
-
+    <script src="jquery-3.6.0.min.js"></script>
+    <!-- <script type="text/javascript" src="js/app.js"></script> -->
+    <script src="js/app-jquery.js"></script>
 </body>
 
 </html>

@@ -361,22 +361,22 @@ $color-bg: #2a2a41;
                 }
             }
         }
-        @keyframes menu_appears {
-            0% {
-                opacity: 0%;
-            }
-            100% {
-                opacity: 100%;
-            }
-        }
-        @keyframes menu_disappears {
-            0% {
-                opacity: 100%;
-            }
-            100% {
-                opacity: 0%;
-            }
-        }
+        // @keyframes menu_appears {
+        //     0% {
+        //         opacity: 0%;
+        //     }
+        //     100% {
+        //         opacity: 100%;
+        //     }
+        // }
+        // @keyframes menu_disappears {
+        //     0% {
+        //         opacity: 100%;
+        //     }
+        //     100% {
+        //         opacity: 0%;
+        //     }
+        // }
         .menu__hide {
             position: fixed;
             top: 0px;
