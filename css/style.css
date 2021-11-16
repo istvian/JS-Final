@@ -291,7 +291,7 @@ div {
       -ms-grid-row-align: center;
       align-self: center;
   padding: 1rem;
-  width: 50%;
+  width: 95%;
 }
 
 .body .section .section__block .form {
@@ -310,7 +310,7 @@ div {
           align-items: center;
   -ms-flex-item-align: center;
       align-self: center;
-  width: 50%;
+  width: 95%;
   height: 100%;
   background: #2a2a41;
   padding: 1rem;
@@ -326,6 +326,27 @@ div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 1rem 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background: #545479;
+}
+
+.body .section .section__block .form .result .result__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -336,55 +357,59 @@ div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem 1rem;
-  width: 100%;
-}
-
-.body .section .section__block .form .result .farmacia {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  width: 50%;
-  background: #545479;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 1rem;
-  border-radius: 10px;
-  border: #2a2a41 solid 3px;
-}
-
-.body .section .section__block .form .result .farmacia .farmacia__title {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
   margin: 0.5rem;
 }
 
-.body .section .section__block .form .result .farmacia .farmacia__detail {
+.body .section .section__block .form .result .result__block .result__title {
+  font-size: 1.8rem;
   color: #fff;
-  font-size: 1.4rem;
-  font-weight: normal;
-  margin: 0.5rem;
+  font-weight: bold;
+  padding: 0 1rem;
+  width: 100%;
+  border-bottom: #fff solid 0.2rem;
+  margin-bottom: 0.2rem;
 }
 
-.body .section .section__block .form .result .farmacia .farmacia__link {
-  color: #fff;
-  background: #00cec8;
-  font-size: 1.4rem;
-  font-weight: bold;
-  width: 50%;
+.body .section .section__block .form .result .result__block .result__content {
+  text-decoration: none;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1rem;
+  font-weight: bold;
+  background: #005b5c;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  cursor: default;
+}
+
+.body .section .section__block .form .result .result__block .result__content a {
+  color: #fff;
+}
+
+.body .section .section__block .form .result .result__block .close {
+  background: #00000042;
+  color: #ffffff42;
+}
+
+.body .section .section__block .form .result .result__block .click:hover {
+  background: #00cec8;
+  cursor: pointer;
 }
 
 .body .section .section__block--left {
@@ -592,7 +617,7 @@ div {
     padding: 1rem 2.5rem;
     background: #00000042;
     width: 100%;
-    margin: .3rem 0;
+    margin: 0.3rem 0;
   }
   .body .nav__links .nav__link:hover {
     background: #ffffff42;
@@ -629,7 +654,7 @@ div {
     padding: 1rem 2.5rem;
     background: #00000042;
     width: 100%;
-    margin: .3rem 0;
+    margin: 0.3rem 0;
   }
   .body .menu__hide .nav__link:hover {
     background: #ffffff42;
@@ -734,6 +759,12 @@ div {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  .body .section .section__block .block--farmacia {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 90%;
+  }
   .body .section .section__block .form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -748,7 +779,7 @@ div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 80%;
+    width: 90%;
     height: 100%;
     -ms-flex-item-align: center;
         align-self: center;
@@ -767,51 +798,78 @@ div {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
     margin: 1rem 1rem;
-  }
-  .body .section .section__block .form .result .farmacia {
-    width: 80%;
-    display: -ms-grid;
-    display: grid;
-    background: #545479;
-    padding: 1rem;
-    border-radius: 10px;
-    border: #2a2a41 solid 3px;
-  }
-  .body .section .section__block .form .result .farmacia .farmacia__title {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0.5rem;
-  }
-  .body .section .section__block .form .result .farmacia .farmacia__detail {
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: normal;
-    margin: 0.5rem;
-  }
-  .body .section .section__block .form .result .farmacia .farmacia__link {
-    color: #fff;
-    background: #00cec8;
-    font-size: 1.4rem;
-    font-weight: bold;
-    width: 70%;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    text-decoration: none;
+    width: 100%;
     text-align: center;
+    padding: 0.5rem;
+    background: #545479;
+  }
+  .body .section .section__block .form .result .result__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0 1rem;
+    margin: 0 0.5rem;
+  }
+  .body .section .section__block .form .result .result__block .result__title {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 1rem;
+    width: 100%;
+    border-bottom: #fff solid 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  .body .section .section__block .form .result .result__block .result__content {
+    width: 100%;
+    min-height: 4rem;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 1rem;
+    font-weight: bold;
+    background: #005b5c;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+    cursor: default;
+  }
+  .body .section .section__block .form .result .result__block .result__content--close {
+    background: #00000042;
+    color: #ffffff42;
+  }
+  .body .section .section__block .form .result .result__block .result__content--click:hover {
+    background: #00cec8;
+    cursor: pointer;
+  }
+  .body .section .section__block .form .result .result__block .result__content--click a {
+    color: #fff;
+    font-weight: bold;
   }
   .body .section .section__block--left {
     background-image: url("../img/banner-left.png");

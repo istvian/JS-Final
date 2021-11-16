@@ -14,6 +14,16 @@ $("#menu-btn").on("click", () => {
     isMenu = !isMenu;
 });
 
+class Farmacia {
+    constructor(nombre, hora, direccion, telefono, geo) {
+        this.nombre = nombre;
+        this.hora = hora;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.geo = geo;
+    }
+}
+
 // AL SELECCIONAR UNA REGION
 let reg_sel = $("#region-selector");
 reg_sel.change((e) => {
@@ -33,7 +43,7 @@ city_sel.change((e) => {
 
 
 function ClearData() {
-    $("#farmacia-container").fadeOut();
+    $(".result__block").fadeOut();
 }
 ClearData();
 // CARGA LAS CIUDADES/COMUNAS AL LISTADO
@@ -62,11 +72,12 @@ async function LoadData(ciudad) {
             let data = respuesta;
             let result = data.find(e => e.comuna_nombre == ciudad)
             if (result) {
-                $("#farmacia-container").fadeIn();
+                $(".result__block").fadeIn();
                 $("#farmacia-nombre").text(result.local_nombre);
-                $("#farmacia-hora").text(`Horario: ${String(result.funcionamiento_hora_apertura).slice(0,5)} a ${String(result.funcionamiento_hora_cierre).slice(0,5)}`);
+                $("#farmacia-hora").text(`${String(result.funcionamiento_hora_apertura).slice(0,5)} a ${String(result.funcionamiento_hora_cierre).slice(0,5)}`);
                 $("#farmacia-direccion").text(result.local_direccion);
                 $("#farmacia-call").attr("href", `Tel:${result.local_telefono}`);
+                $("#farmacia-call").text(result.local_telefono);
                 $("#farmacia-geo").attr("href", `https://maps.google.com/?q=${result.local_lat},${result.local_lng}`)
             } else {
                 ClearData();

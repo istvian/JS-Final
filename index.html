@@ -94,12 +94,35 @@
             <option selected value="0">Selecciona una ciudad</option>
           </select>
                 <div class="result">
-                    <div class="farmacia" id="farmacia-container">
-                        <span id="farmacia-nombre" class="farmacia__title">Nombre:</span>
-                        <span id="farmacia-hora" class="farmacia__detail">- Horario:</span>
-                        <span id="farmacia-direccion" class="farmacia__detail">- Dirección:</span>
-                        <a href="#" id="farmacia-call" class="farmacia__link">Llamar</a>
-                        <a href="#" id="farmacia-geo" class="farmacia__link">Ir al mapa</a>
+                    <div class="result__block" id="nombre">
+                        <span class="result__title">Nombre</span>
+                        <div class="result__content">
+                            <span id="farmacia-nombre">Nombre:</span>
+                        </div>
+                    </div>
+                    <div class="result__block" id="horario">
+                        <span class="result__title">Horario</span>
+                        <div class="result__content">
+                            <span id="farmacia-hora">- Horario:</span>
+                        </div>
+                    </div>
+                    <div class="result__block" id="direccion">
+                        <span class="result__title">Dirección</span>
+                        <div class="result__content">
+                            <span id="farmacia-direccion">- Dirección:</span>
+                        </div>
+                    </div>
+                    <div class="result__block" id="telefono">
+                        <span href="#" class="result__title">Teléfono</span>
+                        <div class="result__content click">
+                            <a href="#" id="farmacia-call">Llamar</a>
+                        </div>
+                    </div>
+                    <div class="result__block" id="mapa">
+                        <span href="#" class="result__title">Geo</span>
+                        <div class="result__content click">
+                            <a href="#" id="farmacia-geo">Ir al mapa</a>
+                        </div>
                     </div>
                 </div>
             </form>
