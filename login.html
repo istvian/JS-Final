@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro FarmaFinder - Encuentra tu farmacia</title>
+</head>
+
+<body class="login__body">
+    <div class="login" id="register">
+        <h1 class="login__title">Registrar un nuevo usuario</h1>
+        <form action="" class="form" id="form">
+            <label for="name" class="form__text">Nombre</label>
+            <input type="text" name="" id="register-name" placeholder="Ingresa tu nombre" required>
+            <label for="email" class="form__text">Correo</label>
+            <input type="email" name="" id="register-email" placeholder="Ingresa tu correo" required>
+            <label for="password" class="form__text">Contraseña</label>
+            <input type="password" name="" id="register-password" placeholder="Ingresa tu contraseña" req required>
+            <button type="button" id="btn" onclick="SaveRegister()">Enviar</button>
+            <span class="warning" id="register__warning">Complete los datos</span>
+            <a onclick="SetRestore()" class="login__forgot">¿Olvidaste tu contraseña?</a>
+            <a onclick="SetLogin()" class="login__forgot">Iniciar sesión</a>
+        </form>
+        <a href="login.html" class="login__btn">Iniciar sesión</a>
+    </div>
+    <div class="login" id="login">
+        <h1 class="login__title">Inicio de Sesión</h1>
+        <form action="" class="form">
+            <label for="email" class="form__text">Correo</label>
+            <input type="email" name="" id="login-email" placeholder="Ingresa tu correo" required>
+            <label for="password" class="form__text">Contraseña</label>
+            <input type="password" name="" id="login-password" placeholder="Ingresa tu contraseña" required>
+            <button type="button" onclick="Login()">Enviar</button>
+            <span class="warning" id="login__warning">Contraseña incorrecta</span>
+            <a onclick="SetRestore()" class="login__forgot">¿Olvidaste tu contraseña?</a>
+            <a onclick="SetRegister()" class="login__forgot">Registrate aquí</a>
+        </form>
+    </div>
+    <div class="login" id="restore">
+        <h1 class="login__title">Recuperación de contraseña</h1>
+        <form action="" class="form">
+            <label for="email" class="form__text">Correo</label>
+            <input type="email" name="" id="restore-email" placeholder="Ingresa tu correo" required>
+            <p class="restore-password" id="restore-password">Contraseña</p>
+            <button type="button" onclick="Restore() ">Enviar</button>
+            <span class="warning" id="restore__warning">Ingrese los datos</span>
+            <a onclick="SetRegister() " class="login__forgot ">Registrarme</a>
+            <a onclick="SetLogin() " class="login__forgot ">Iniciar sesión</a>
+        </form>
+    </div>
+
+    <script src="js/register.js "></script>
+</body>
+
+</html>

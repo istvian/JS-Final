@@ -174,10 +174,9 @@ $color-bg: #2a2a41;
                     flex-flow: row nowrap;
                     justify-content: center;
                     align-items: flex-start;
-                    margin: 1rem 1rem;
+                    margin: 1rem .5rem;
                     width: 100%;
                     text-align: center;
-                    padding: 0.5rem;
                     background: $color-tres;
                     .result__block {
                         display: flex;
@@ -188,33 +187,42 @@ $color-bg: #2a2a41;
                         width: fit-content;
                         height: fit-content;
                         padding: 1rem;
-                        margin: 0.5rem;
                         .result__title {
                             font-size: 1.8rem;
                             color: $color-white;
                             font-weight: bold;
                             padding: 0 1rem;
-                            width: 100%;
-                            border-bottom: $color-white solid 0.2rem;
-                            margin-bottom: 0.2rem;
+                            width: fit-content;
+                            margin-bottom: 0.5rem;
                         }
                         .result__content {
                             text-decoration: none;
                             justify-self: center;
                             align-self: center;
                             width: 100%;
-                            height: 100%;
+                            height: 3rem;
                             margin-top: 0.5rem;
-                            font-size: 1.5rem;
+                            font-size: 1.2rem;
                             color: $color-white;
-                            padding: 1rem;
+                            padding: .5rem;
                             font-weight: bold;
                             background: $color-dos;
                             transition: background 0.2s;
                             cursor: default;
+                            overflow: hidden;
+                            outline: $color-dos solid .2rem;
                             a {
                                 color: $color-white;
                             }
+                            &:hover {
+                                background: $color-uno;
+                                cursor: pointer;
+                            }
+                        }
+                        .turno {
+                            background-color: $color-uno;
+                            font-size: 1.4rem;
+                            outline: $color-white solid .2rem;
                         }
                         .close {
                             background: $color-transparent;
@@ -482,12 +490,13 @@ $color-bg: #2a2a41;
                         margin: 1rem 0.5rem;
                     }
                     .result {
-                        display: flex;
-                        flex-flow: column wrap;
+                        // display: flex;
+                        // flex-flow: column wrap;
+                        display: grid;
                         justify-content: center;
                         align-items: center;
+                        grid-column: 1fr 1fr 1fr 1fr 1fr;
                         margin: 1rem 1rem;
-                        width: 100%;
                         text-align: center;
                         padding: 0.5rem;
                         background: $color-tres;
@@ -517,13 +526,14 @@ $color-bg: #2a2a41;
                                 margin-right: 0.5rem;
                                 margin-top: 0;
                                 margin-bottom: 0;
-                                font-size: 1.2rem;
+                                font-size: 0.1rem;
                                 color: $color-white;
                                 padding: 1rem;
                                 font-weight: bold;
                                 background: $color-dos;
                                 transition: background 0.2s;
                                 cursor: default;
+                                white-space: nowrap;
                             }
                             .result__content--close {
                                 background: $color-transparent;
@@ -538,6 +548,10 @@ $color-bg: #2a2a41;
                                     color: $color-white;
                                     font-weight: bold;
                                 }
+                            }
+                            .table {
+                                all: unset;
+                                background-color: $color-dos;
                             }
                         }
                     }
@@ -560,6 +574,125 @@ $color-bg: #2a2a41;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+            }
+        }
+    }
+}
+
+.login__body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: $color-bg;
+    background: url(../img/banner-doctor.png);
+    background-size: scale-down;
+    backdrop-filter: blur(5px);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Poppins", sans-serif;
+    .login {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: $color-transparent 0 0 20px 10px;
+        padding: 2rem;
+        border-radius: 25px;
+        .login__btn {
+            display: none;
+            font-size: 1.5rem;
+            color: $color-white;
+            padding: 0.8rem;
+            border-radius: 25px;
+            width: 50%;
+            text-align: center;
+            transition: background 0.3s;
+            margin: 0.2rem;
+            &:hover {
+                background-color: $color-uno;
+                cursor: pointer;
+            }
+        }
+        .login__title {
+            font-size: 2.5rem;
+            color: $color-white;
+            padding: 1rem;
+        }
+        .form {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            .form__text {
+                all: unset;
+                font-size: 1.5rem;
+                margin-top: 1rem;
+                color: $color-white;
+                text-align: start;
+                width: 100%;
+            }
+            input {
+                all: unset;
+                font-size: 1.2rem;
+                background-color: $color-white;
+                width: 100%;
+                height: 2.5rem;
+                margin: 0.5rem;
+                text-align: center;
+                &:placeholder-shown {
+                    text-align: center;
+                }
+            }
+            .warning {
+                display: none;
+                background-color: rgb(255, 142, 142);
+                color: white;
+                padding: 1rem;
+                &::placeholder {
+                    color: white;
+                }
+            }
+            button {
+                width: 100%;
+                background-image: none;
+                background-color: $color-uno;
+                margin: 2rem 1rem 2rem 1rem;
+                font-family: "Poppins", sans-serif;
+                color: $color-white;
+                outline: none;
+                border: none;
+                font-size: 1.2rem;
+                transition: background-color 0.3s;
+                padding: 0.8rem;
+                border-radius: 25px;
+                &:hover {
+                    background-color: $color-dos;
+                    cursor: pointer;
+                }
+            }
+            .login__forgot {
+                font-size: 1.2rem;
+                color: $color-white;
+                padding: 0.8rem;
+                border-radius: 25px;
+                width: 100%;
+                text-align: center;
+                transition: background 0.3s;
+                margin: 0.2rem;
+                &:hover {
+                    background-color: $color-uno;
+                    cursor: pointer;
+                }
+            }
+            .restore-password {
+                display: none;
+                color: white;
             }
         }
     }

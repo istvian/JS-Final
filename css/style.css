@@ -336,10 +336,9 @@ div {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 1rem 1rem;
+  margin: 1rem .5rem;
   width: 100%;
   text-align: center;
-  padding: 0.5rem;
   background: #545479;
 }
 
@@ -365,7 +364,6 @@ div {
   height: -moz-fit-content;
   height: fit-content;
   padding: 1rem;
-  margin: 0.5rem;
 }
 
 .body .section .section__block .form .result .result__block .result__title {
@@ -373,9 +371,10 @@ div {
   color: #fff;
   font-weight: bold;
   padding: 0 1rem;
-  width: 100%;
-  border-bottom: #fff solid 0.2rem;
-  margin-bottom: 0.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 0.5rem;
 }
 
 .body .section .section__block .form .result .result__block .result__content {
@@ -386,20 +385,33 @@ div {
       -ms-grid-row-align: center;
       align-self: center;
   width: 100%;
-  height: 100%;
+  height: 3rem;
   margin-top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
-  padding: 1rem;
+  padding: .5rem;
   font-weight: bold;
   background: #005b5c;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
   cursor: default;
+  overflow: hidden;
+  outline: #005b5c solid 0.2rem;
 }
 
 .body .section .section__block .form .result .result__block .result__content a {
   color: #fff;
+}
+
+.body .section .section__block .form .result .result__block .result__content:hover {
+  background: #00cec8;
+  cursor: pointer;
+}
+
+.body .section .section__block .form .result .result__block .turno {
+  background-color: #00cec8;
+  font-size: 1.4rem;
+  outline: #fff solid 0.2rem;
 }
 
 .body .section .section__block .form .result .result__block .close {
@@ -793,21 +805,16 @@ div {
     margin: 1rem 0.5rem;
   }
   .body .section .section__block .form .result {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
+    display: -ms-grid;
+    display: grid;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    grid-column: 1fr 1fr 1fr 1fr 1fr;
     margin: 1rem 1rem;
-    width: 100%;
     text-align: center;
     padding: 0.5rem;
     background: #545479;
@@ -850,7 +857,7 @@ div {
     margin-right: 0.5rem;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 1.2rem;
+    font-size: 0.1rem;
     color: #fff;
     padding: 1rem;
     font-weight: bold;
@@ -858,6 +865,7 @@ div {
     -webkit-transition: background 0.2s;
     transition: background 0.2s;
     cursor: default;
+    white-space: nowrap;
   }
   .body .section .section__block .form .result .result__block .result__content--close {
     background: #00000042;
@@ -870,6 +878,10 @@ div {
   .body .section .section__block .form .result .result__block .result__content--click a {
     color: #fff;
     font-weight: bold;
+  }
+  .body .section .section__block .form .result .result__block .table {
+    all: unset;
+    background-color: #005b5c;
   }
   .body .section .section__block--left {
     background-image: url("../img/banner-left.png");
@@ -889,5 +901,183 @@ div {
     background-size: cover;
     background-position: center;
   }
+}
+
+.login__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #2a2a41;
+  background: url(../img/banner-doctor.png);
+  background-size: scale-down;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-repeat: no-repeat;
+  background-position-x: left;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+}
+
+.login__body .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: #00000042 0 0 20px 10px;
+          box-shadow: #00000042 0 0 20px 10px;
+  padding: 2rem;
+  border-radius: 25px;
+}
+
+.login__body .login .login__btn {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 25px;
+  width: 50%;
+  text-align: center;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  margin: 0.2rem;
+}
+
+.login__body .login .login__btn:hover {
+  background-color: #00cec8;
+  cursor: pointer;
+}
+
+.login__body .login .login__title {
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 1rem;
+}
+
+.login__body .login .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.login__body .login .form .form__text {
+  all: unset;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #fff;
+  text-align: start;
+  width: 100%;
+}
+
+.login__body .login .form input {
+  all: unset;
+  font-size: 1.2rem;
+  background-color: #fff;
+  width: 100%;
+  height: 2.5rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.login__body .login .form input:placeholder-shown {
+  text-align: center;
+}
+
+.login__body .login .form .warning {
+  display: none;
+  background-color: #ff8e8e;
+  color: white;
+  padding: 1rem;
+}
+
+.login__body .login .form .warning::-webkit-input-placeholder {
+  color: white;
+}
+
+.login__body .login .form .warning:-ms-input-placeholder {
+  color: white;
+}
+
+.login__body .login .form .warning::-ms-input-placeholder {
+  color: white;
+}
+
+.login__body .login .form .warning::placeholder {
+  color: white;
+}
+
+.login__body .login .form button {
+  width: 100%;
+  background-image: none;
+  background-color: #00cec8;
+  margin: 2rem 1rem 2rem 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  padding: 0.8rem;
+  border-radius: 25px;
+}
+
+.login__body .login .form button:hover {
+  background-color: #005b5c;
+  cursor: pointer;
+}
+
+.login__body .login .form .login__forgot {
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 25px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  margin: 0.2rem;
+}
+
+.login__body .login .form .login__forgot:hover {
+  background-color: #00cec8;
+  cursor: pointer;
+}
+
+.login__body .login .form .restore-password {
+  display: none;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
