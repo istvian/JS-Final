@@ -35,15 +35,14 @@ class UserPref {
 //#endregion
 
 // AL CARGAR LA PAGINA
-function OnStart() {
+$(function() {
     ResultBlock(false);
     LoadStorage();
-    if (!localStorage.getItem("logged")) {
+    if (!localStorage.key("logged") || localStorage.getItem("logged") == false) {
         Close();
         window.location.replace("login.html");
     }
-}
-
+});
 // AL SELECCIONAR UNA REGION
 let reg_sel = $("#region-selector");
 reg_sel.change((e) => {
@@ -172,15 +171,15 @@ function AddItem(result, className) {
         ResultBlock(false);
     }
 }
-// CHEQUEA SI TIENE PREFERENCIAS DE USUARIO
+// GUARDA LAS PREFERENCIAS DE USUARIO
 function SaveStorage() {
     localStorage.setItem("userPref", JSON.stringify(pref));
 }
-var pref = new UserPref(correo = JSON.parse(localStorage.getItem("session")).correo);
-var user = JSON.parse(localStorage.getItem("session"));
-// CARGA LAS PREFERENCIAS DE USUARIO
+const pref = new UserPref({ correo: JSON.parse(localStorage.getItem("session")).correo });
+const user = JSON.parse(localStorage.getItem("session"));
+// CHEQUEA SI TIENE PREFERENCIAS DE USUARIO Y LAS CARGA
 async function LoadStorage() {
-    pref = JSON.parse(localStorage.getItem("userPref"));
+    let pref = JSON.parse(localStorage.getItem("userPref"));
     if (pref) {
         reg_sel.val(pref.region);
         await LoadCity(pref.region);
@@ -193,5 +192,3 @@ async function LoadStorage() {
 function Close() {
     localStorage.removeItem("logged");
 }
-
-OnStart();
