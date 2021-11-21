@@ -1,13 +1,25 @@
 # Visita el sitio [aqui](https://istvian.github.io/JS-Final/)
 
 # Proyecto-Final
-## FarmaFinder - Un sitio para encontrar las farmacias que estan de turno en Chile
+## FarmaFinder - Un sitio para encontrar las farmacias que estan de turno en Chile. Simula un sitio que consulta a API para obtener los datos. (El sistema de Login esta hecho para que sea funcional, no es seguro ya que es realizado en el FrontEnd y con LocalStorage)
 
 ### Este proyecto fue realizado como proyecto final para el curso de Javascript de CoderHouse. Visita el sitio web aqui [Aquí](https://istvian.github.io/JS-Final/)
 
 ### Consta de 2 Html
 - index.html --Página de inicio (Utilizo JQuery)
 - login.html -- Consta de 3 secciones (Registro, Recuperar contraseña, Iniciar sesión) (Utilizo Javascript Vanilla)
+
+### Aprendizajes aplicados
+- Variables
+- Arrays
+- Consumir APIS
+- JSON
+- Objetos
+- LocalStorage
+- JQuery
+- Javascript Vanilla
+- Modificación del DOM
+- Eventos
 
 ### Herramientas utilizadas
 - Visual Studio Code
@@ -18,3 +30,7 @@
 - Prettier (Extension de Visual Studio Code para formatear codigo)
 - Javascript
 - JQuery
+
+#### Creditos
+- La información de farmacias fue obtenida a traves del sitio 
+
