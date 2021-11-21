@@ -5,6 +5,12 @@
 
 ### Este proyecto fue realizado como proyecto final para el curso de Javascript de CoderHouse. Visita el sitio web aqui [Aquí](https://istvian.github.io/JS-Final/)
 
+## Instrucciones
+- Debes registrar un nuevo usuario (No incluye un usuario por defecto)
+- Iniciar sesión con los datos que creaste
+- Recuperar contraseña (opcional)
+- Luego elige la región y la comuna que desees (Tus preferencias se guardan en LocalStorage)
+
 ### Consta de 2 Html
 - index.html --Página de inicio (Utilizo JQuery)
 - login.html -- Consta de 3 secciones (Registro, Recuperar contraseña, Iniciar sesión) (Utilizo Javascript Vanilla)

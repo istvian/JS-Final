@@ -50,6 +50,13 @@ reg_sel.change((e) => {
         LoadCity(reg_sel.val());
         pref.region = reg_sel.val();
         SaveStorage();
+    } else {
+        ClearData();
+        city_sel.empty();
+        city_sel.append($('<option>', {
+            value: 0,
+            text: "Selecciona una ciudad"
+        }));
     }
 });
 // AL SELECCIONAR UNA CIUDAD
@@ -68,9 +75,9 @@ city_sel.change((e) => {
 // OCULTA O MUESTRA EL BLOQUE DE RESULTADOS
 function ResultBlock(state) {
     if (state) {
-        $(".result__block").fadeIn();
+        $(".result").fadeIn();
     } else {
-        $(".result__block").fadeOut();
+        $(".result").fadeOut();
     }
 }
 

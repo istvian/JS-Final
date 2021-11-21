@@ -277,6 +277,9 @@ $color-bg: #2a2a41;
 }
 
 @media screen and (max-width: 800px) {
+    #direccion {
+        display: none;
+    }
     .body {
         font-family: "Poppins", sans-serif;
         background: $color-bg;
@@ -471,87 +474,88 @@ $color-bg: #2a2a41;
                 }
                 .block--farmacia {
                     align-self: center;
-                    width: 90%;
+                    width: 100%;
                 }
                 .form {
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: center;
                     align-items: center;
-                    width: 90%;
-                    height: 100%;
                     align-self: center;
+                    width: 100%;
+                    height: 100%;
                     background: $color-bg;
                     padding: 1rem;
-                    margin: 0.5rem;
                     .form__select {
                         display: block;
-                        width: 70%;
+                        width: 50%;
                         margin: 1rem 0.5rem;
                     }
                     .result {
-                        // display: flex;
-                        // flex-flow: column wrap;
-                        display: grid;
+                        display: flex;
+                        flex-flow: row nowrap;
                         justify-content: center;
-                        align-items: center;
-                        grid-column: 1fr 1fr 1fr 1fr 1fr;
-                        margin: 1rem 1rem;
+                        align-items: flex-start;
+                        margin: 1rem .5rem;
+                        width: 100%;
                         text-align: center;
-                        padding: 0.5rem;
                         background: $color-tres;
                         .result__block {
                             display: flex;
-                            flex-flow: row nowrap;
+                            flex-flow: column nowrap;
                             justify-content: center;
                             align-items: center;
                             text-align: center;
-                            width: 90%;
+                            width: min-content;
                             height: fit-content;
-                            padding: 0 1rem;
-                            margin: 0 0.5rem;
+                            padding: .2rem;
+                            margin: .5rem;
                             .result__title {
-                                display: none;
-                                font-size: 1.5rem;
+                                font-size: 1.4rem;
                                 color: $color-white;
                                 font-weight: bold;
-                                padding: 0 1rem;
-                                width: 100%;
-                                border-bottom: $color-white solid 0.2rem;
-                                margin-bottom: 0.2rem;
+                                padding: 0 0rem;
+                                width: fit-content;
+                                margin-bottom: 0.5rem;
                             }
                             .result__content {
+                                text-decoration: none;
+                                justify-self: center;
+                                align-self: center;
                                 width: 100%;
-                                min-height: 4rem;
-                                margin-right: 0.5rem;
-                                margin-top: 0;
-                                margin-bottom: 0;
-                                font-size: 0.1rem;
+                                height: 3rem;
+                                margin: 0.3rem 0rem 0.3rem 0rem;
+                                font-size: 1.1rem;
                                 color: $color-white;
-                                padding: 1rem;
+                                padding: .3rem;
                                 font-weight: bold;
                                 background: $color-dos;
                                 transition: background 0.2s;
                                 cursor: default;
-                                white-space: nowrap;
-                            }
-                            .result__content--close {
-                                background: $color-transparent;
-                                color: $color-hover;
-                            }
-                            .result__content--click {
+                                overflow: hidden;
+                                outline: $color-dos solid .2rem;
+                                a {
+                                    color: $color-white;
+                                }
                                 &:hover {
                                     background: $color-uno;
                                     cursor: pointer;
                                 }
-                                a {
-                                    color: $color-white;
-                                    font-weight: bold;
-                                }
                             }
-                            .table {
-                                all: unset;
-                                background-color: $color-dos;
+                            .turno {
+                                background-color: $color-uno;
+                                font-size: 1.2rem;
+                                outline: $color-white solid .2rem;
+                            }
+                            .close {
+                                background: $color-transparent;
+                                color: $color-hover;
+                            }
+                            .click {
+                                &:hover {
+                                    background: $color-uno;
+                                    cursor: pointer;
+                                }
                             }
                         }
                     }
